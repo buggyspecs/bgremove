@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-gray-50 to-gray-100;
+  }
+  
+  input[type="text"],
+  input[type="url"],
+  input[type="number"],
+  textarea,
+  select {
+    @apply border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm;
+  }
+}
+
+.hero-gradient {
+  @apply bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500;
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
